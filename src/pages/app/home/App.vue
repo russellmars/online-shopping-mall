@@ -1,5 +1,5 @@
 <template>
   <div>
-    index page
+    app home page
   </div>
 </template>

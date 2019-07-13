@@ -1,4 +1,8 @@
 const { primary, wash, mall } = require("./deploy").deploy;
+// 如果src选项存在则入口解析成src/pages/${src}/main.js，否则src/pages/${path}/main.js
+// html 模板如果path或者src下面有index.html则使用该模板，否则使用public下面的index.html
+// html 页面的title使用title配置，否则使用deploy下项目的title，否则package.json的title
+
 module.exports = [
   {
     name: "home",

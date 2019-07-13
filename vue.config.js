@@ -1,5 +1,5 @@
 const production = process.env.NODE_ENV === "production";
-const deploy = "mall";
+const deploy = "primary";
 const project = require("./pages/deploy").projects[deploy];
 const { resolvePages } = require("./pages");
 

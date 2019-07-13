@@ -1,5 +1,5 @@
 <template>
   <div>
-    order detail
+    wash page
   </div>
 </template>
