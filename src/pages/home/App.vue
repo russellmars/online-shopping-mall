@@ -1,7 +1,8 @@
 <template>
   <div>
-    home page
-    <button @click="toMall">to mall page</button>
+    <h1>home page</h1>
+    <router-link to="/mall"> to mall</router-link>
+    <div @click="toMall">to mall 2</div>
   </div>
 </template>
 
@@ -9,7 +10,12 @@
 export default {
   methods: {
     toMall() {
-      this.$router.push("/mall");
+      this.$router.push({
+        path: "/mall",
+        query: {
+          name: 123
+        }
+      });
     }
   }
 };

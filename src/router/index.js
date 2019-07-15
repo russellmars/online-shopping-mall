@@ -2,6 +2,7 @@ import buildURL from "@/utils/url/buildURL";
 import combineURLs from "@/utils/url/combineURLs";
 import parseSearchString from "@/utils/url/parseSearchString";
 import resolvePageFilename from "../../pages/resolves/resolvePageFilename";
+import Link from "./components/link";
 
 function parsePath(route) {
   if (!route) {
@@ -42,14 +43,17 @@ const router = (function() {
 
 const route = (function() {
   const query = parseSearchString(location.search);
+
   return {
     query
   };
 })();
 
 export default {
-  install(Vue) {
+  install(Vue, options) {
+    router.options = Object.assign({}, options);
     Vue.prototype.$router = router;
     Vue.prototype.$route = route;
+    Vue.component("RouterLink", Link);
   }
 };

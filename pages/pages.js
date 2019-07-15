@@ -104,6 +104,7 @@ module.exports = [
     deploy_excludes: [mall]
   },
   {
+    name: "app-name",
     path: "/app/home",
     deploy_includes: [primary]
   }
